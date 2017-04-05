@@ -11,6 +11,7 @@
     <version>0.1-SNAPSHOT</version>
     <modules>
         <module>dummy-coarse-resolution-pre-processing</module>
+        <module>dummy-coarse-resolution-pre-processing-python</module>
     </modules>
 
     <dependencyManagement>
