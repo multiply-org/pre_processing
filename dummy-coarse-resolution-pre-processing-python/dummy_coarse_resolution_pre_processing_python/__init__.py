@@ -1,1 +1,1 @@
-from dummy_coarse_resolution_pre_processing_python import dummy_coarse_resolution_pre_processor
+from dummy_coarse_resolution_pre_processor import dummy_coarse_resolution_pre_processor

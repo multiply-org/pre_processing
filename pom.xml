@@ -12,6 +12,8 @@
     <modules>
         <module>dummy-coarse-resolution-pre-processing</module>
         <module>dummy-coarse-resolution-pre-processing-python</module>
+        <module>dummy-high-resolution-pre-processing</module>
+        <module>dummy-sar-pre-processing</module>
     </modules>
 
     <dependencyManagement>
