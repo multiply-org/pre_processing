@@ -1,6 +1,6 @@
 import snappy
 
-class high_resolution_pre_processor:
+class DummyHighResolutionPreProcessor:
 
     def pre_process(self, brdf_descriptor, high_res_data):
         print ('Performing pre-processing on high-resolution data using a brdf descriptor')

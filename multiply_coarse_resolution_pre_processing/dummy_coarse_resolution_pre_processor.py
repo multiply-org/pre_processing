@@ -1,6 +1,6 @@
 import snappy
 
-class dummy_coarse_resolution_pre_processor:
+class DummyCoarseResolutionPreProcessor:
 
     def pre_process(self, coarse_res_l1):
         print ('Performing pre-processing on coarse resolution data')

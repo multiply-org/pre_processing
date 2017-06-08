@@ -1,6 +1,6 @@
 import snappy
 
-class dummy_sar_pre_processor:
+class DummySARPreProcessor:
 
     def pre_process(self, sar_data):
         print ('Performing pre-processing on SAR data')
