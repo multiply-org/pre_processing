@@ -9,7 +9,7 @@ class PreProcessor(object):
         self.config = kwargs.get('config', None)
         self._check()
 
-        self.gpt = self.config.get('gpt', '/home/tweiss/snap/bin/gpt')  # todo relace this default value by some better option e.g. a command call to which gpt or so
+        self.gpt = self.config.gpt
 
     def _check(self):
         assert self.config is not None, 'ERROR: configuration needs to be provided'
@@ -49,10 +49,10 @@ class SARPreProcessor(PreProcessor):
         # Name addition for processed data
         xml_addition = 'subset'
         
-        lowerright_y = self.config['lr']['lat']
-        upperleft_y = self.config['ul']['lat']
-        upperleft_x = self.config['ul']['lon']
-        lowerright_x = self.config['lr']['lon']
+        lowerright_y = self.config.region['lr']['lat']
+        upperleft_y = self.config.region['ul']['lat']
+        upperleft_x = self.config.region['ul']['lon']
+        lowerright_x = self.config.region['lr']['lon']
         # todo: how is it with coordinates that go across the datum line ??
 
         # Coordinates for subset area
