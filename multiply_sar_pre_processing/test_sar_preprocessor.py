@@ -5,16 +5,25 @@ Testing the SAR Preprocessor
 from . sar_pre_processor import SARPreProcessor
 import unittest
 import tempfile
+import datetime
+from multiply_dummy.configuration import Configuration
+from multiply_dummy.state import TargetState
+
 
 class SARTest(unittest.TestCase):
     def setUp(self):
         self.d_in = tempfile.mkdtemp()
 
-        self.c = {'gpt' : '/some/direcotry/'}
+        t1 = datetime.datetime(2000,1,1)
+        t2 = datetime.datetime(2002,12,31)
 
 
-        self.c.update({'lr' : {'lat': 45., 'lon' : 11.2}})
-        self.c.update({'ul' : {'lat': 47., 'lon' : 10.2}})
+        tstate = TargetState(state={'lai':True, 'sm':False}) 
+
+        r = {}
+        r.update({'lr' : {'lat': 45., 'lon' : 11.2}})
+        r.update({'ul' : {'lat': 47., 'lon' : 10.2}})
+        self.c = Configuration(region=r, time_start=t1, time_stop=t2, tstate=tstate)
 
 
     def tearDown(self):
