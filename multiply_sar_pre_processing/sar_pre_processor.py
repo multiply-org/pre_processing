@@ -65,7 +65,7 @@ class SARPreProcessor(PreProcessor):
         
         return 'some data'
 
-    def get_area(latmin, latmax, lonmin, lonmax):
+    def get_area(self, latmin, latmax, lonmin, lonmax):
         """
         Change input coordinates for subset operator
         """
